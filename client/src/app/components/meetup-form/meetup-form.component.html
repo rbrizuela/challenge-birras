@@ -1,0 +1,55 @@
+<div class="col-md-5 offset-md-2">
+  <div class="card">
+    <div class="card-body">
+      <form>
+
+        <div class="form-group">
+          <label for="name">Fecha</label>
+          <input type="date"
+                  name="fecha" 
+                  [(ngModel)]="meetup.fecha" 
+                  placeholder="Fecha"
+                  class="form-control"
+                  autofocus>
+        </div>
+    
+        <div class="form-group">
+          <label for="name">Hora</label>
+          <input type="time"
+                  name="hora" 
+                  [(ngModel)]="meetup.hora" 
+                  placeholder="Hora"
+                  class="form-control"
+                  autofocus>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Descripción</label>
+          <input type="text" 
+                 name="descripcion" 
+                 [(ngModel)]="meetup.descripcion"
+                 placeholder="Descripción" 
+                 class="form-control" 
+                 maxlength="50"
+                 autofocus>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Lugar</label>
+          <input type="text" 
+                 name="lugar" 
+                 [(ngModel)]="meetup.lugar"
+                 placeholder="Lugar" 
+                 class="form-control" 
+                 maxlength="50"
+                 autofocus>
+        </div>
+
+        <button class="btn btn-success btn-block" 
+                (click)="edit ? updateMeetup() : saveNewMeetup()">
+          SAVE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
